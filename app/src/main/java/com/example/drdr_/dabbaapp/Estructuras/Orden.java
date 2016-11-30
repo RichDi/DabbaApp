@@ -1,4 +1,4 @@
-package com.example.drdr_.dabbaapp;
+package com.example.drdr_.dabbaapp.Estructuras;
 
 import java.io.Serializable;
 import java.util.List;

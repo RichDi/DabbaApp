@@ -13,6 +13,14 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
+import com.example.drdr_.dabbaapp.Estructuras.Cartucho;
+import com.example.drdr_.dabbaapp.Estructuras.Custom_Order;
+import com.example.drdr_.dabbaapp.Estructuras.Custom_User;
+import com.example.drdr_.dabbaapp.Estructuras.Orden;
+import com.example.drdr_.dabbaapp.Estructuras.Paquete;
+import com.example.drdr_.dabbaapp.Estructuras.Paquete_Recipe;
+import com.example.drdr_.dabbaapp.Estructuras.User_Dabba;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

@@ -2,8 +2,6 @@ package com.example.drdr_.dabbaapp;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -12,7 +10,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,10 +19,12 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.drdr_.dabbaapp.Estructuras.Cartucho;
+import com.example.drdr_.dabbaapp.Estructuras.Orden;
+import com.example.drdr_.dabbaapp.Estructuras.Paquete;
 import com.squareup.picasso.Picasso;
 
 import java.text.ParseException;
@@ -123,7 +122,7 @@ public class Tabbed_Requests extends AppCompatActivity {
             TextView price_tv = (TextView) rootView.findViewById(R.id.price);
             TextView status_tv = (TextView) rootView.findViewById(R.id.status);
 
-            ListView list_view_cartuchos = (ListView) rootView.findViewById(R.id.lista);
+            ListView list_view_cartuchos = (ListView) rootView.findViewById(R.id.lista_cartuchos);
             ListView list_view_paquetes = (ListView) rootView.findViewById(R.id.lista_paquetes);
 
             Button mapa = (Button) rootView.findViewById(R.id.button2);
