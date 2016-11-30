@@ -2,6 +2,7 @@ package com.example.drdr_.dabbaapp;
 
 import android.content.Context;
 import android.content.Intent;
+
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -51,6 +52,8 @@ public class Tabbed_Requests extends AppCompatActivity {
         Json_Request object = (Json_Request) getIntent().getSerializableExtra("object");
         int position = getIntent().getExtras().getInt("position");
         lista_resultados = object.getResultados();
+
+
 
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
@@ -124,6 +127,14 @@ public class Tabbed_Requests extends AppCompatActivity {
 
             ListView list_view_cartuchos = (ListView) rootView.findViewById(R.id.lista_cartuchos);
             ListView list_view_paquetes = (ListView) rootView.findViewById(R.id.lista_paquetes);
+
+            Button btn = (Button)rootView.findViewById(R.id.btn_delivery_complete);
+            btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                }
+            });
 
             Button mapa = (Button) rootView.findViewById(R.id.button2);
 
@@ -251,9 +262,7 @@ public class Tabbed_Requests extends AppCompatActivity {
                 TextView tt2 = (TextView) v.findViewById(R.id.textView);
                 TextView tt3 = (TextView) v.findViewById(R.id.textView2);
 
-                Picasso.with(getContext()).
-                        load(p.getImage()).
-                        into(tt1);
+                Picasso.with(getContext()).load(p.getImage()).fit().into(tt1);
 
                 tt2.setText(p.getName());
                 tt3.setText(p.getPrice());
