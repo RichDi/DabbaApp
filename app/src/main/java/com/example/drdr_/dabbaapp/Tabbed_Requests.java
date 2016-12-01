@@ -3,6 +3,7 @@ package com.example.drdr_.dabbaapp;
 import android.content.Context;
 import android.content.Intent;
 
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -52,8 +53,6 @@ public class Tabbed_Requests extends AppCompatActivity {
         Json_Request object = (Json_Request) getIntent().getSerializableExtra("object");
         int position = getIntent().getExtras().getInt("position");
         lista_resultados = object.getResultados();
-
-
 
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
@@ -114,6 +113,18 @@ public class Tabbed_Requests extends AppCompatActivity {
             return fragment;
         }
 
+        class HTTPPost extends AsyncTask<String,Void,Void> {
+
+
+            @Override
+            protected Void doInBackground(String... strings) {
+
+
+
+                return null;
+            }
+        }
+
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
@@ -132,6 +143,8 @@ public class Tabbed_Requests extends AppCompatActivity {
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+
+
 
                 }
             });
